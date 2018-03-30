@@ -28,5 +28,5 @@
 
 # 记录    
 
-   [关于webpack的理解](https://github.com/iiling/blog/issues/1)
+   - [关于webpack的理解](https://github.com/iiling/blog/issues/1)
 
