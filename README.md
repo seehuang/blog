@@ -26,7 +26,7 @@
 
    - [关于webpack的理解](https://github.com/iiling/blog/issues/1)
 
-   - [async/await异步总结]()
+   - [async/await异步总结](https://github.com/iiling/blog/issues/2)
 
    - [nginx反向代理联调遇到的坑]() 
 
