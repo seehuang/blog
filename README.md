@@ -23,7 +23,7 @@
 成任务达到目标。如果我们想做成一件事，我们必须要无论风雨的稳定地坚持！</pre>
 
 # 记录    
-
+   - [ReactNative环境搭建遇到坑 （2018.4.12）](https://github.com/iiling/blog/issues/4)
    - [async/await异步总结 （2018.4.9）](https://github.com/iiling/blog/issues/2)
 
    - [nginx反向代理联调遇到的坑 （2018.4.2）](https://github.com/iiling/blog/issues/3) 
