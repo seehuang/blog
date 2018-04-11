@@ -26,7 +26,7 @@
    - [ReactNative环境搭建遇到坑 （2018.4.12）](https://github.com/iiling/blog/issues/4)
    - [async/await异步总结 （2018.4.9）](https://github.com/iiling/blog/issues/2)
 
-   - [nginx反向代理联调遇到的坑 （2018.4.2）](https://github.com/iiling/blog/issues/3) 
+   - [nginx反向代理联调遇到的坑 （2018.3.28）](https://github.com/iiling/blog/issues/3) 
 
    - [关于webpack的理解（2018.3.23）](https://github.com/iiling/blog/issues/1)
 
