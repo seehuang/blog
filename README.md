@@ -24,15 +24,15 @@
 
 # 记录     
 
-   - [对于redux异步的理解 （2018.4.12）](https://github.com/iiling/blog/issues/5)
+   - [对于redux异步的理解 （2018.3.18）](https://github.com/iiling/blog/issues/5)
 
-   - [ReactNative环境搭建遇到坑 （2018.4.10）](https://github.com/iiling/blog/issues/4)
+   - [ReactNative环境搭建遇到坑 （2018.3.11）](https://github.com/iiling/blog/issues/4)
   
-   - [async/await异步总结 （2018.3.28）](https://github.com/iiling/blog/issues/2)
+   - [async/await异步总结 （2018.3.4）](https://github.com/iiling/blog/issues/2)
 
-   - [nginx反向代理联调遇到的坑 （2018.3.23）](https://github.com/iiling/blog/issues/3) 
+   - [nginx反向代理联调遇到的坑 （2018.2.26）](https://github.com/iiling/blog/issues/3) 
 
-   - [关于webpack的理解（2018.3.15）](https://github.com/iiling/blog/issues/1)
+   - [关于webpack的理解（2018.2.23）](https://github.com/iiling/blog/issues/1)
 
    
 
