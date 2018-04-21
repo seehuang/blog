@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#canvas{
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="400"></canvas>
+	<script type="text/javascript">
+		const canvas = document.getElementById("canvas");
+		const ctx = canvas.getContext('2d');
+
+		//画坐标轴和 坐标轴尾部的箭头
+		ctx.beginPath();
+		ctx.moveTo(100,300);//原点
+		ctx.lineTo(100,50);//Y轴
+		ctx.lineTo(105,60);//右边箭头
+		ctx.moveTo(100,50);//y轴顶点
+		ctx.lineTo(95,60);//左边箭头
+		ctx.moveTo(100,300);//原点
+		ctx.lineTo(550,300);//
+		ctx.lineTo(540,290);
+		ctx.moveTo(550,300);//
+		ctx.lineTo(540,310);
+		ctx.stroke();
+		ctx.closePath();
+
+		//y轴网格
+		ctx.beginPath();
+		ctx.strokeStyle="#666";
+		ctx.lineWidth="0.5";
+		ctx.moveTo(95,250);
+		ctx.fillText("50",75,250);
+		ctx.lineTo(550,250);
+		ctx.moveTo(95,200);
+		ctx.fillText("100",75,200);
+		ctx.lineTo(550,200);
+		ctx.moveTo(95,150);
+		ctx.fillText("150",75,150);
+		ctx.lineTo(550,150);
+		ctx.moveTo(95,100);
+		ctx.fillText("200",75,100);
+		ctx.lineTo(550,100);
+		ctx.stroke();
+		ctx.closePath();
+	
+		//x轴的轴坐标,刻度
+		ctx.beginPath();
+		ctx.strokeStyle="#000";
+		ctx.fillStyle="red";
+		ctx.lineWidth="1";
+		ctx.moveTo(150,300);
+		ctx.lineTo(150,305);
+		ctx.moveTo(200,300);
+		ctx.fillText("2012",165,320)
+		ctx.fillText("2013",215,320)
+		ctx.lineTo(200,305);
+		ctx.moveTo(250,300);
+		ctx.fillText("2014",265,320)
+		ctx.lineTo(250,305);
+		ctx.moveTo(300,300);
+		ctx.fillText("2015",315,320)
+		ctx.lineTo(300,305);
+		ctx.moveTo(350,300);
+		ctx.lineTo(350,305);
+		ctx.moveTo(400,300);
+		ctx.fillText("2016",365,320)
+		ctx.lineTo(400,305);
+		ctx.moveTo(450,300);
+		ctx.fillText("2017",405,320)
+		ctx.lineTo(450,305);
+		ctx.stroke();
+		ctx.closePath();
+
+		ctx.beginPath();
+		ctx.fillStyle="blue";
+		ctx.fillRect(105,300,40,-120);
+		ctx.fillRect(155,300,40,-130);
+		ctx.fillRect(205,300,40,-140);
+		ctx.fillRect(255,300,40,-160);
+		ctx.fillRect(305,300,40,-20);
+		ctx.fillRect(355,300,40,-80);
+		ctx.fillRect(405,300,40,-20);
+		ctx.fillRect(455,300,40,-80);
+		ctx.fill();
+		ctx.closePath();
+
+
+	</script>
+</body>
+</html>

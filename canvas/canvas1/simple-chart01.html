@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="500" style="border: 1px solid #ccc"></canvas>
+	<script type="text/javascript">
+
+		const canvas = document.getElementById("canvas");
+		const ctx = canvas.getContext("2d");
+		const colorList = ["red","blue","green","black","deeppink","pink"]
+		
+		function drawPieChart(data){
+			ctx.beginPath();
+			ctx.arc(200,200,120,0,Math.PI*2);
+			ctx.stroke()
+			ctx.closePath();
+			let total=0;
+			let preAngel=0;
+			let curAngel=0;
+			for(let j = 0; j<data.length;j++){
+				total = total+data[j];
+			}
+			for(let i =0;i<data.length;i++){
+				ctx.beginPath();
+				ctx.fillStyle=colorList[i];
+				preAngel =curAngel;
+				curAngel=data[i]/total+preAngel;
+				console.log(preAngel)
+				console.log(curAngel+"----")
+				ctx.arc(200,200,100,Math.PI*2*preAngel,Math.PI*2*curAngel);
+				ctx.lineTo(200,200);
+				//ctx.stroke();
+				ctx.fill();
+				ctx.closePath();
+			}
+		}
+		drawPieChart([20,20,40,20,10]);
+	</script>
+</body>
+</html>

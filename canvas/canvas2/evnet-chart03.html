@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="500" style="border: 1px solid #ccc;"></canvas>
+	<script type="text/javascript">
+		const canvas = document.getElementById("canvas");
+		const ctx =  canvas.getContext("2d");
+		let isSelect = false;
+
+		function draw(){
+			ctx.beginPath();
+			ctx.fillStyle="pink";
+			ctx.arc(200,200,50,0,Math.PI*2)
+			ctx.fill();
+			ctx.closePath();
+		}
+
+		draw();
+		canvas.addEventListener("mousedown",mousedown);
+		canvas.addEventListener("mousemove",mousemove);
+		canvas.addEventListener("mouseup",mouseup);
+		function mousedown(){
+			ctx.clearRect(0,0,800,500);
+			console.log("t1")
+			const x = event.pageX;
+			const y = event.pageY;
+			ctx.beginPath();
+			ctx.fillStyle="pink";
+			ctx.arc(200,200,50,0,Math.PI*2);
+			if(ctx.isPointInPath(x,y)){
+				isSelect=true;
+			}
+			ctx.fill();
+			ctx.closePath();
+		} 
+
+		function mousemove(){
+			if(isSelect){
+				console.log("1")
+				ctx.clearRect(0,0,800,500);
+				console.log(event.pageX)
+				ctx.beginPath();
+				ctx.fillStyle="pink";
+				ctx.arc(event.pageX,event.pageY,50,0,Math.PI*2);
+				ctx.fill();
+				ctx.closePath();
+			}
+		}
+
+		function mouseup(){
+			isSelect=false
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvas时钟</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="400" style="border: 2px solid #ccc"></canvas>
+	<script type="text/javascript">
+		
+		const clock = {
+			
+			init:function(){
+				this.canvas = document.getElementById("canvas");
+				this.ctx = canvas.getContext("2d");
+				//this.drawClock(this.ctx)
+			},
+			/**
+			 * @Author   hc
+			 * @DateTime 2018-04-18
+			 * @Describe 绘制表盘
+			 * @return   {[type]}   [description]
+			 */
+			drawClock:function(ctx){
+				ctx.beginPath();
+				ctx.strokeStyle="red";
+				ctx.arc(200,160,100,0,Math.PI*2);
+				for(let i=1;i<=60;i++){
+					ctx.moveTo(200,160);
+					ctx.lineTo(200+100*Math.cos((i*6*Math.PI)/180),160+100*Math.sin((i*6*Math.PI)/180))
+					ctx.stroke();
+				}
+				ctx.stroke();
+				ctx.closePath();
+				
+				ctx.beginPath();
+				ctx.fillStyle="#fff";
+				ctx.arc(200,160,90,0,Math.PI*2);
+				ctx.fill();
+				ctx.closePath();
+
+				ctx.beginPath();
+				ctx.fillStyle="red";
+				ctx.arc(200,160,2,0,Math.PI*2);
+				ctx.fill();
+				ctx.closePath();
+			
+			
+			},
+			/**
+			 * @Author   hc
+			 * @DateTime 2018-04-18
+			 * @Describe 画秒针
+			 * @return   {[type]}   [description]
+			 */
+			drawLine:function(ctx,sec){
+				//this.canvas.setAttribute("width","0");
+				//this.canvas.setAttribute("width","800")
+				ctx.clearRect(0,0,500,400);
+				this.drawClock(this.ctx)
+				ctx.moveTo(200,160);
+				ctx.strokeStyle="red";
+				ctx.lineTo(200+70*Math.cos((sec*6*Math.PI)/180),160+70*Math.sin((sec*6*Math.PI)/180));
+				ctx.stroke();
+
+
+
+			},
+			animateClock:function(){
+				var _this = this;
+				_this.drawLine(_this.ctx,new Date().getSeconds());
+				requestAnimationFrame(()=>{
+					_this.animateClock()
+				})
+			}
+
+		}
+
+		clock.init()
+		clock.animateClock()
+
+	</script>
+</body>
+</html>
