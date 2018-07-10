@@ -24,15 +24,63 @@
 
 # 记录     
 
-   - [对于redux异步的理解 （2018.3.18）](https://github.com/iiling/blog/issues/5)
+    ## 理论
 
-   - [ReactNative环境搭建遇到坑 （2018.3.11）](https://github.com/iiling/blog/issues/4)
+     - [call，apply，bind简记](https://github.com/hopechans/blog/issues/24)
+     - [命令式思想和状态驱动思想 ](https://github.com/hopechans/blog/issues/18)   
+     - [事件驱动编程与EventEmitter ](https://github.com/hopechans/blog/issues/16)  
+     - [关于JavaScript原型模式思考 ](https://github.com/hopechans/blog/issues/8)  
+     - [对于中间件模式的理解和总结](https://github.com/hopechans/blog/issues/6)  
+     - 
+    ## 工程化
+
+     - [关于webpack的理解](https://github.com/iiling/blog/issues/1)
+     - [对于redux异步的理解](https://github.com/iiling/blog/issues/5)
+     - [ReactNative环境搭建遇到坑](https://github.com/iiling/blog/issues/4)
+     - [async/await异步总结](https://github.com/iiling/blog/issues/2)
+     - [nginx反向代理联调遇到的坑](https://github.com/iiling/blog/issues/3) 
+    
+    ## 框架
+
+     - [VueSSR学习总结 ](https://github.com/hopechans/blog/issues/17)
+     - [redux学习总结  ](https://github.com/hopechans/blog/issues/7)
+
+    ## 知识总结
+
+     - [单页与多页应用的简单对比 ](https://github.com/hopechans/blog/issues/22)
+     - [极简瀑布流 ](https://github.com/hopechans/blog/issues/21)
+     - [《同构JavaScript应用开发》读后感 ](https://github.com/hopechans/blog/issues/10)
+     - [前端单元测试的学习  ](https://github.com/hopechans/blog/issues/9)
+
+    ## CSS
+
+     - [CSS模块化——前世 ](https://github.com/hopechans/blog/issues/19)  
+     - [CSS模块化——今生 ](https://github.com/hopechans/blog/issues/20)    
+
+    ## ES7
+
+     - [typescript——装饰器 ](https://github.com/hopechans/blog/issues/23)
+
+    ## NodeJs
+
+     - [Nodejs单线程事件驱动编程的理解](https://github.com/hopechans/blog/issues/15)
+
+    ## Canvas
+
+    - [Canvas简单粗暴入门（一）——静态绘图](https://github.com/hopechans/blog/issues/12)
+    - [Canvas简单粗暴入门（二）——事件交互 ](https://github.com/hopechans/blog/issues/13)
+    - [Canvas简单粗暴入门（三）——动画特效 ](https://github.com/hopechans/blog/issues/14)
+
+
   
-   - [async/await异步总结 （2018.3.4）](https://github.com/iiling/blog/issues/2)
 
-   - [nginx反向代理联调遇到的坑 （2018.2.26）](https://github.com/iiling/blog/issues/3) 
+   
+  
+   
 
-   - [关于webpack的理解（2018.2.23）](https://github.com/iiling/blog/issues/1)
+   
+
+  
 
    
 
