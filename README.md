@@ -31,7 +31,7 @@
      - [事件驱动编程与EventEmitter ](https://github.com/hopechans/blog/issues/16)  
      - [关于JavaScript原型模式思考 ](https://github.com/hopechans/blog/issues/8)  
      - [对于中间件模式的理解和总结](https://github.com/hopechans/blog/issues/6)  
-     - 
+     - [http缓存了解一下](https://github.com/hopechans/blog/issues/25)  
     ## 工程化
 
      - [关于webpack的理解](https://github.com/iiling/blog/issues/1)
