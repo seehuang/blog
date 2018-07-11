@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>江苏达谕律师事务所</title>
+    <meta name="keywords" content="江苏达谕律师事务所" />
+    <meta name="description" content="江苏达谕律师事务所" />
+    <meta id="myViewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <script type="text/javascript">
+		document.write("<script src='config/config.js?rnd="+Math.random()+"'><\/script>");
+    </script>
+      <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/footface.css">
+      <link rel="stylesheet" type="text/css" href="css/print.css">
+      <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+        </div>
+        <div class="wrap page-head">
+            <img src="img/advertisement/t170206121853_907477611.jpg" class="banner img-responsive" alt="" title="">
+        </div>
+        <div class="container classWithPad lastItemMargin">
+            <div>
+                <div class="col-md-8 content">
+                    <h3>律师名册</h3>
+                    <div>
+                        <p class="pro">银行金融及公司顾问业务团队</p>
+                        <ul class="list-professional" id="group1">
+                            <!-- <li>
+                                <a href="lawyerDetail.html.html" title="陈瑆律师">胡阳光律师</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="pro">公司破产业务团队</p>
+                        <ul class="list-professional" id="group2">
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="pro">房地产与建设工程团队</p>
+                        <ul class="list-professional" id="group3">
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="pro">刑事辩护团队</p>
+                        <ul class="list-professional" id="group4">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 sidebar">
+                    <h3>业务范围</h3>
+                    <ul class="list-unstyled list-practices" id="bizGroup">
+                        <li>
+                            <a href="" title="银行金融及公司">银行金融及公司</a>
+                        </li>
+                        <li>
+                            <a href="" title="公司破产">公司破产</a>
+                        </li>
+                        <li>
+                            <a href="" title="公司破产">公司破产</a>
+                        </li>
+                        <li>
+                            <a href="" title="公司破产">公司破产</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+        <div id="footer">
+        </div>
+    </div>
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script src="js/fetch.js"></script>
+    
+    <script src="js/component.js"></script>
+    <script type="text/javascript">
+
+        let data = My.fetch.getLawyersByGroup();
+        let bizData = My.fetch.getBizScopeList();
+        renderLawyers(data)
+        renderBiz(bizData)
+        /**
+         * @Author   hc
+         * @DateTime 2018-06-19
+         * @Describe 渲染右边的业务详情
+         * @param    {[type]}   data [description]
+         * @return   {[type]}        [description]
+         */
+        function renderBiz(bizData){
+            let bizGroup = $("#bizGroup");
+            bizGroup.empty()
+            let html = '';
+            for(let i=0;i<bizData.length;i++){
+                html += `<li><a href="business.html?id=${bizData[i].id}" title="${bizData[i].scopeName}">${bizData[i].scopeName}</a></li>`
+            }
+            bizGroup.html(html)
+        }
+        /**
+         * @Author   hc
+         * @DateTime 2018-06-19
+         * @Describe 渲染律师列表
+         * @param    {[type]}   data [description]
+         * @return   {[type]}        [description]
+         */
+        function renderLawyers(data){
+            if(data[0].length > 0){
+            let html = '';
+            for(let i=0;i<data[0].length;i++){
+                html +=`<li>
+                    <a href="lawyerDetail.html?id=${data[0][i].id}" title="刑事辩护">${data[0][i].lawyerName}</a>
+                </li>` ;
+                
+            }
+            $("#group1").html(html)
+            }
+            if(data[1].length > 0){
+                let html = '';
+                for(let i=0;i<data[1].length;i++){
+                    html +=`<li>
+                        <a href="lawyerDetail.html?id=${data[1][i].id}" title="刑事辩护">${data[1][i].lawyerName}</a>
+                    </li>` ;
+                    
+                }
+                $("#group2").html(html)
+            }
+            if(data[2].length > 0){
+                let html = '';
+                for(let i=0;i<data[2].length;i++){
+                    html +=`<li>
+                        <a href="lawyerDetail.html?id=${data[2][i].id}" title="刑事辩护">${data[2][i].lawyerName}</a>
+                    </li>` ;
+                    
+                }
+                $("#group3").html(html)
+            }
+            if(data[3].length > 0){
+                let html = '';
+                for(let i=0;i<data[3].length;i++){
+                    html +=`<li>
+                        <a href="lawyerDetail.html?id=${data[3][i].id}" title="刑事辩护">${data[3][i].lawyerName}</a>
+                    </li>` ;
+                    
+                }
+                $("#group4").html(html)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

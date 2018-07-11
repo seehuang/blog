@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>江苏达谕律师事务所</title>
+  <meta name="keywords" content="江苏达谕律师事务所" />
+  <meta name="description" content="江苏达谕律师事务所" />
+  <meta id="myViewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+  <script type="text/javascript">
+		document.write("<script src='config/config.js?rnd="+Math.random()+"'><\/script>");
+  </script>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/footface.css">
+  <link rel="stylesheet" type="text/css" href="css/print.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">    
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+    </div>
+    <div class="wrap page-head">
+      <img src="img/advertisement/t170103092802_1160282824.jpg" class="banner img-responsive" alt="" title="">
+    </div>
+    <div class="container classWithPad newspage lastItemMargin">
+      <div>
+        <div class="col-md-12 content" style="border: none">
+          <h3>我所消息</h3>
+          <div id="newsList">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+    <div id="footer">
+    </div>
+  </div>
+  <script src="lib/jquery-1.9.1.min.js"></script>
+  <script src="js/fetch.js"></script>
+  <script src="js/component.js"></script>
+  <script type="text/javascript">
+    const newData = My.fetch.getNewsList();
+    renderList(newData)
+    function renderList(data){
+      let html = '';
+      for(let i=0;i<data.length;i++){
+        html += ` <div class="row news-row">
+            <div class="col-md-3">
+              <img src="${My.fetch.imgUrl+data[i].picture}" class="img-responsive"  />
+            </div>
+            <div class="col-md-9">
+              <p class="news-date">${data[i].createTime.substr(0,10)}</p>
+              <a href="newsDetail.html?id=${data[i].id}" title="">
+                <h4> ${data[i].title}</h4>
+              </a>
+                ${data[i].desc}
+              </div>
+          </div>
+        `
+      }
+      $("#newsList").html(html)
+    }
+
+</script>
+</body>
+
+</html>

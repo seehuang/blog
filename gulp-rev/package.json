@@ -1,0 +1,16 @@
+{
+  "name": "lawyer-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/hopechan/lawyer-frontend.git",
+  "author": "huangcheng <136970135@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-collector": "^1.3.1",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-sequence": "^1.0.0"
+  }
+}

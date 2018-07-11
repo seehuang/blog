@@ -1,0 +1,41 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+@page {margin: 2cm;}
+html,body{margin:0!important;padding:0!important;width: 210mm;  -webkit-print-color-adjust: exact;}
+a[href]:after {content: none !important;}
+#header{position:absolute!important;top:0!important;background-color: #004c7c!important;}
+#header .col-md-4{display:none;}
+#header .col-md-4+.col-md-4{display:block;padding-bottom:30px;}
+#header .col-md-4+.col-md-4+.col-md-4{display:none;}
+#navs,.carousel-inner .item a,.meritas img,.par li img,.page-head img,#footer .col-md-8,
+#back-to-top,.newspage .sidebar
+{display:none!important;}
+.classWithPad { padding: 20px 0; }
+.par li {width: 32%;}
+.par li a {position:relative;}
+.home-office .col-md-4+.col-md-4{display:none;}
+.home-office .col-md-4 {width:100%;}
+.home-office .col-md-4 > .row{width:32%;float:left;}
+#footer{margin-top:20px;}
+.page-head {height:150px;}
+.professional{margin-top:-30px;}
+.professional *{color: black!important;}
+.professional-item .side-content{display:block!important;}
+.professional-item .side-toggle{padding-left:0;}
+.dd_level_2{display:block!important;}
+.dd_level_2 > li > .dd_content{display:block!important;}
+.list-office {margin-bottom: 20px;}
+.slider-home img { margin-right: -150px;}
+.slider-home .slider-inner p {font-size: 30px;}
+#redirectconfirm-modal{display:none!important;}
+#footer{position:relative!important;}
+.page-search{margin-top:0;}
+.news-row img{width:203px;}
+html[lang="en-us"] .zh, html[lang="en-us"] .cn{display:none!important}
+html[lang="zh-tw"] .en, html[lang="zh-tw"] .cn{display:none!important}
+html[lang="zh-cn"] .en, html[lang="zh-cn"] .zh{display:none!important}
+}
