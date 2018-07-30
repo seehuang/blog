@@ -68,9 +68,19 @@
 
 ## Canvas
 
+### canvas入门
+
 - [Canvas简单粗暴入门（一）——静态绘图](https://github.com/hopechans/blog/issues/12)
 - [Canvas简单粗暴入门（二）——事件交互 ](https://github.com/hopechans/blog/issues/13)
 - [Canvas简单粗暴入门（三）——动画特效 ](https://github.com/hopechans/blog/issues/14)
+
+### canvas小游戏
+
+- [Canvas端午吃粽子（一）—— 视差滚动](https://github.com/hopechans/blog/issues/26)
+- [Canvas端午吃粽子（二）—— 玩家操作](https://github.com/hopechans/blog/issues/27)
+- [Canvas端午吃粽子（三）—— 怪物出没](https://github.com/hopechans/blog/issues/28)
+- [Canvas端午吃粽子（四）—— 卡顿优化](https://github.com/hopechans/blog/issues/29)
+- [Canvas端午吃粽子（五）—— 单位碰撞](https://github.com/hopechans/blog/issues/30)
 
 
   
