@@ -2,7 +2,7 @@
 * @Author: hc
 * @Date:   2018-07-17 11:15:58
 * @Last Modified by:   hc
-* @Last Modified time: 2018-07-30 11:05:25
+* @Last Modified time: 2018-07-31 15:02:59
 */
 
 // 主程序，场景类
@@ -22,8 +22,10 @@ class Main {
 		const _this = this;
 		const canvas = document.querySelector("#canvas");
 		this.ctx = canvas.getContext("2d");
+		this.girl = new Girl(this.ctx)
 		this.drawBg();
 		this.start();
+
 	}
 
 	// 开始游戏
@@ -41,17 +43,11 @@ class Main {
 
 		// 	}
 		// }
-		// requestAnimationFrame(_this.start.bind(_this))
-
-
-		const girl = new Girl(_this.ctx);//绘制女孩
-		
-		this.timer= setInterval(function(){
 		
 			_this.ctx.clearRect(0, 0, _this.bgWidth, _this.bgHeight);
 			_this.rollBg()
 	
-			girl.init();
+			_this.girl.init();
 			
 			 _this.generateSprite();//生成精灵
 			//绘制精灵
@@ -62,8 +58,31 @@ class Main {
 				}
 				
 			}
-			girl.eatFood(_this.spriteList);
-		},Math.round(1000/60));
+			_this.girl.eatFood(_this.spriteList)
+		 requestAnimationFrame(_this.start.bind(_this))
+
+
+
+		// const girl = new Girl(_this.ctx);//绘制女孩
+		
+		// this.timer= setInterval(function(){
+		
+		// 	_this.ctx.clearRect(0, 0, _this.bgWidth, _this.bgHeight);
+		// 	_this.rollBg()
+	
+		// 	girl.init();
+			
+		// 	 _this.generateSprite();//生成精灵
+		// 	//绘制精灵
+		// 	for(let i =0;i<_this.spriteList.length;i++){
+		// 		if(_this.spriteList[i]){
+		// 			_this.spriteList[i].drawSprite(_this.ctx);
+		// 			_this.spriteList[i].down(_this.ctx,_this.spriteList);
+		// 		}
+				
+		// 	}
+		// 	girl.eatFood(_this.spriteList);
+		// },Math.round(1000/60));
 
 
 
