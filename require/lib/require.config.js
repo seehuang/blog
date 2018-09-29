@@ -1,6 +1,7 @@
 require.config({
-	baseUrl:'./lib',
+	baseUrl:'',
 	paths:{
-		jquery:"jquery"
+		jquery:"./lib/jquery",
+		sum1:"./common/sum"
 	}
 })
