@@ -26,12 +26,19 @@
 
 # 记录
 ## 理论
+
+
+- [大部分人都不知道的GET和POST](https://github.com/hopechans/blog/issues/36)
+- [关于单元测试框架的简单总结](https://github.com/hopechans/blog/issues/35)
+- [Jest单元测试中的cookie设置问题](https://github.com/hopechans/blog/issues/34)
+- [能不能一句话说说BFC](https://github.com/hopechans/blog/issues/33)
+- [H5页面性能分析方案](https://github.com/hopechans/blog/issues/32)
 - [call，apply，bind简记](https://github.com/hopechans/blog/issues/24)
 - [命令式思想和状态驱动思想 ](https://github.com/hopechans/blog/issues/18)   
 - [事件驱动编程与EventEmitter ](https://github.com/hopechans/blog/issues/16)  
 - [关于JavaScript原型模式思考 ](https://github.com/hopechans/blog/issues/8)  
 - [对于中间件模式的理解和总结](https://github.com/hopechans/blog/issues/6)  
-- 
+
 ## 工程化
 
 - [关于webpack的理解](https://github.com/iiling/blog/issues/1)
