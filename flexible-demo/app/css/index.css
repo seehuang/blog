@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/*
+* @Author: sugarman
+* @Date:   2018-06-22 11:32:55
+* @Last Modified by:   sugarman
+* @Last Modified time: 2018-06-25 14:58:13
+*/
+/**
+  混合宏,px转rem
+ */
+/**
+  混合宏,字体不应该用rem，因为可能会出现13,15的px
+ */
+.btn {
+  width: 9.33333rem;
+  font-size: 24px;
+  background-color: red;
+  height: 1rem;
+  color: #fff;
+  text-align: center; }
+  [data-dpr="2"] .btn {
+    font-size: 48px; }
+  [data-dpr="3"] .btn {
+    font-size: 72px; }
