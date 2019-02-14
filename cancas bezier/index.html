@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>部署图初步方案实施</title>
+</head>
+<body>
+	<canvas id="canvas" style="border:1px solid #666;position:absolute;z-index:1" width="600" height="300"></canvas>
+	<canvas id="draw" style="border:1px solid #666;position:absolute;z-index:2" width="600" height="300"></canvas>
+	<script type="text/javascript">
+		const canvas = document.querySelector("#canvas");
+		const ctx =  canvas.getContext("2d");
+
+		const canvas1 = document.querySelector("#draw");
+		const ctx2 =  canvas1.getContext("2d");
+		
+		const arr = [];
+		const d1 = drawImage(ctx,0,0);
+		const d2 = drawImage(ctx,300,0);
+		const d3 = drawImage(ctx,200,200);
+		const d4 = drawImage(ctx,400,200);
+		const L1 = createLine(d1,d2);
+		const L2 = createLine(d1,d3);
+		const L3 = createLine(d3,d4);
+		arr.push(L1,L2,L3);
+		let t=0;
+		// 画点
+ 		function drawPoint(){
+ 			if(t>=0.99){
+ 				t=0;
+ 			}
+ 			t=t+0.01;
+ 			ctx2.clearRect(0,0,600,300);
+ 			ctx2.fillStyle = '#00E5EE';
+ 			arr.map((item)=>{
+ 				ctx2.beginPath();
+ 				const obj = getBezierDot(t,item);
+			    ctx2.arc(obj.x, obj.y,5, 0, Math.PI * 2);
+			    ctx2.fill();
+			    ctx2.closePath();
+ 			})
+ 			requestAnimationFrame(drawPoint)
+ 		}
+		drawPoint()
+
+
+		//利用贝塞尔曲线公式计算出曲线上某点坐标
+		function getBezierDot(t,obj){
+		    var x = (1-t)*(1-t)*obj.p0_x + 2*t*(1-t)*obj.p1_x + t*t*obj.p2_x;
+		    var y = (1-t)*(1-t)*obj.p0_y + 2*t*(1-t)*obj.p1_y + t*t*obj.p2_y;
+		    return {x:x,y:y}
+		}
+
+		function createLine(d1,d2){
+			const cx = (d2.x+d1.x)/2+50;
+			const cy = (d2.y+d1.y)/2+50;
+			ctx.beginPath();
+            ctx.moveTo(d1.x, d1.y);
+            ctx.quadraticCurveTo(cx,cy,d2.x, d2.y);
+            ctx.globalCompositeOperation="destination-over";
+            ctx.strokeStyle="#ccc";
+			ctx.stroke();
+            ctx.closePath();
+            return {
+            	p0_x:d1.x,
+            	p0_y:d1.y,
+            	p1_x:cx,
+            	p1_y:cy,
+            	p2_x:d2.x,
+            	p2_y:d2.y
+            }
+		}
+
+		function drawImage(ctx,x,y){
+            ctx.save();
+            ctx.strokeStyle = "rgba(0,0,0,0)";
+            ctx.miterLimit = 4;
+            ctx.font = "normal normal 400 normal 15px / 21.4286px ''";
+            ctx.font = "   15px ";
+             ctx.translate(x,y)
+            ctx.scale(0.4, 0.4);
+            ctx.scale(0.1953125, 0.1953125);
+           
+            ctx.save();
+            ctx.fillStyle = "#37BBEF";
+            ctx.font = "   15px ";
+            ctx.beginPath();
+            ctx.moveTo(537, 820.3);
+            ctx.lineTo(67, 590.3);
+            ctx.lineTo(67, 368.29999999999995);
+            ctx.lineTo(537, 580.3);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+            ctx.save();
+            ctx.fillStyle = "#2481BA";
+            ctx.font = "   15px ";
+            ctx.beginPath();
+            ctx.moveTo(537, 820.3);
+            ctx.lineTo(957, 590.3);
+            ctx.lineTo(957, 370.29999999999995);
+            ctx.lineTo(537, 580.3);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+            ctx.save();
+            ctx.fillStyle = "#3ED6FF";
+            ctx.font = "   15px ";
+            ctx.beginPath();
+            ctx.moveTo(67, 368.3);
+            ctx.lineTo(537, 580.3);
+            ctx.lineTo(957, 370.29999999999995);
+            ctx.lineTo(462.6, 203.69999999999996);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+            ctx.save();
+            ctx.fillStyle = "#FFFFFF";
+            ctx.font = "   15px ";
+            ctx.beginPath();
+            ctx.moveTo(532, 266.7);
+            ctx.lineTo(414.9, 259.59999999999997);
+            ctx.lineTo(443.59999999999997, 307.59999999999997);
+            ctx.lineTo(473.09999999999997, 293.99999999999994);
+            ctx.lineTo(575.8, 333.19999999999993);
+            ctx.lineTo(605.4, 318.79999999999995);
+            ctx.lineTo(502.5, 280.4);
+            ctx.closePath();
+            ctx.moveTo(406.8, 324.6);
+            ctx.lineTo(290.2, 315);
+            ctx.lineTo(318.5, 365.4);
+            ctx.lineTo(347.9, 351.79999999999995);
+            ctx.lineTo(450, 394.5);
+            ctx.lineTo(479.6, 380.1);
+            ctx.lineTo(377.40000000000003, 338.20000000000005);
+            ctx.closePath();
+            ctx.moveTo(605.8, 438.1);
+            ctx.lineTo(723.1999999999999, 443.90000000000003);
+            ctx.lineTo(695.1999999999999, 391.70000000000005);
+            ctx.lineTo(665.4, 407.20000000000005);
+            ctx.lineTo(562.9, 366.70000000000005);
+            ctx.lineTo(533.3, 381.40000000000003);
+            ctx.lineTo(635.5999999999999, 422.6);
+            ctx.closePath();
+            ctx.moveTo(538.8, 472.9);
+            ctx.lineTo(437, 429);
+            ctx.lineTo(407.3, 443.7);
+            ctx.lineTo(509.1, 488.3);
+            ctx.lineTo(479.3, 503.8);
+            ctx.lineTo(596.2, 512);
+            ctx.lineTo(568.6, 457.4);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+            ctx.restore();
+            ctx.restore();
+
+            return {
+            	x:x+50,
+            	y:y+50
+            }
+		}
+	</script>
+</body>
+</html>
